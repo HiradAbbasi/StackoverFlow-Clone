@@ -12,7 +12,7 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Ask Me Anything</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,7 +33,7 @@
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary" type="submit">Search</button>
+          <button class="btn btn-dark" type="submit">Search</button>
         </form>
       </div>
     </nav>
@@ -41,9 +41,20 @@
   <main>
     <div class="container">
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Ask Question
-      </button>
+      <div class="d-flex w-100 justify-content-between filter-ask-container">
+        <button type="button" class="btn btn-dark reponsive-btn-input" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Ask Question
+        </button>
+  
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+          <label class="btn btn-outline-dark  reponsive-btn-input" for="btnradio1">Newest</label>
+        
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+          <label class="btn btn-outline-dark reponsive-btn-input" for="btnradio2">Most answered</label>
+        </div>
+      </div>
+      
       
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -77,123 +88,158 @@
           </div>
         </div>
       </div>
+      
       <div class="list-group text-white bg-dark">
         <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
+          <div class="interactions-container d-flex w-100 justify-content-between">
+            <div class="d-flex w-75" style="gap: 15px; flex-wrap: nowrap;">
+              <h2 class="mb-1">0 votes</h2>
+              <h2 class="mb-1" style="color: hsl(210,8%,45%);">0 answers</h2>
+              <h2 class="mb-1" style="color: hsl(210,8%,45%);">1 view</h2>
+            </div>
+            <small class="text-muted uploaded-date-responsive">3 days ago</small>
           </div>
-          <p class="mb-1">Some placeholder content in a paragraph.</p>
-          <button type="button" class="btn btn-outline-info btn-sm">wordpress</button>
-          <button type="button" class="btn btn-outline-info btn-sm">flutter</button>
-          <button type="button" class="btn btn-outline-info btn-sm">api</button>
-          <button type="button" class="btn btn-outline-info btn-sm">dart</button>
-          <button type="button" class="btn btn-outline-info btn-sm">wordpress-rest-api</button>
-        </a>
-
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
+          <p class="mb-0 question-decription" style="color: hsl(206deg 100% 40%); font-size: 1.2rem; width: 80%;">React Error: Child compilation failed: Must use import to load ES Module</p>
+          <div class="d-flex w-100 justify-content-between tag-and-user-container">
+            <div class="question-tags-container d-flex w-75" style="gap: 5px; flex-wrap: wrap;">
+              <button type="button" class="btn btn-outline-success btn-sm">wordpress</button>
+              <button type="button" class="btn btn-outline-success btn-sm">flutter</button>
+              <button type="button" class="btn btn-outline-success btn-sm">api</button>
+              <button type="button" class="btn btn-outline-success btn-sm">dart</button>
+              <button type="button" class="btn btn-outline-success btn-sm">wordpress-rest-api</button>
+            </div>
+            <div class="question-user-container d-flex w-20" style="gap: 5px; align-items: center;">
+              <div class="chat-message-profile-img">
+                <!-- {`${props.value[0].firstName} ${props.value[0].lastName}`.match(/(\b\S)?/g).join("").match(/(^\S|\S$)?/g).join("").toUpperCase()} -->
+                HA
+              </div>
+              <div class= "user-name" style="display: flex; flex-direction:column; align-items: center;" >
+                <p class="mb-0" style="color: hsl(206deg 100% 40%); font-size: 1rem;">Hirad Abbasi (20)</p>
+                <small class="text-muted">3 days ago</small>
+              </div>
+            </div>
           </div>
-          <p class="mb-1">How can I prevent options view of the RawAutocomplete widget from overflowing on screen in Flutter?</p>
-          <button type="button" class="btn btn-outline-info btn-sm">flutter</button>
-          <button type="button" class="btn btn-outline-info btn-sm">dart</button>
-          <button type="button" class="btn btn-outline-info btn-sm">popup</button>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Some placeholder content in a paragraph.</p>
-          <button type="button" class="btn btn-outline-info btn-sm">wordpress</button>
-          <button type="button" class="btn btn-outline-info btn-sm">flutter</button>
-          <button type="button" class="btn btn-outline-info btn-sm">api</button>
-          <button type="button" class="btn btn-outline-info btn-sm">dart</button>
-          <button type="button" class="btn btn-outline-info btn-sm">wordpress-rest-api</button>
-        </a>
-
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">How can I prevent options view of the RawAutocomplete widget from overflowing on screen in Flutter?</p>
-          <button type="button" class="btn btn-outline-info btn-sm">flutter</button>
-          <button type="button" class="btn btn-outline-info btn-sm">dart</button>
-          <button type="button" class="btn btn-outline-info btn-sm">popup</button>
         </a>
         <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
+          <div class="interactions-container d-flex w-100 justify-content-between">
+            <div class="d-flex w-75" style="gap: 15px; flex-wrap: nowrap;">
+              <h2 class="mb-1">0 votes</h2>
+              <h2 class="mb-1" style="color: hsl(210,8%,45%);">0 answers</h2>
+              <h2 class="mb-1" style="color: hsl(210,8%,45%);">1 view</h2>
+            </div>
+            <small class="text-muted uploaded-date-responsive">3 days ago</small>
           </div>
-          <p class="mb-1">Some placeholder content in a paragraph.</p>
-          <button type="button" class="btn btn-outline-info btn-sm">wordpress</button>
-          <button type="button" class="btn btn-outline-info btn-sm">flutter</button>
-          <button type="button" class="btn btn-outline-info btn-sm">api</button>
-          <button type="button" class="btn btn-outline-info btn-sm">dart</button>
-          <button type="button" class="btn btn-outline-info btn-sm">wordpress-rest-api</button>
-        </a>
-
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
+          <p class="mb-0 question-decription" style="color: hsl(206deg 100% 40%); font-size: 1.2rem; width: 80%;">React Error: Child compilation failed: Must use import to load ES Module</p>
+          <div class="d-flex w-100 justify-content-between tag-and-user-container">
+            <div class="question-tags-container d-flex w-75" style="gap: 5px; flex-wrap: wrap;">
+              <button type="button" class="btn btn-outline-success btn-sm">wordpress</button>
+              <button type="button" class="btn btn-outline-success btn-sm">flutter</button>
+              <button type="button" class="btn btn-outline-success btn-sm">api</button>
+              <button type="button" class="btn btn-outline-success btn-sm">dart</button>
+              <button type="button" class="btn btn-outline-success btn-sm">wordpress-rest-api</button>
+            </div>
+            <div class="question-user-container d-flex w-20" style="gap: 5px; align-items: center;">
+              <div class="chat-message-profile-img">
+                <!-- {`${props.value[0].firstName} ${props.value[0].lastName}`.match(/(\b\S)?/g).join("").match(/(^\S|\S$)?/g).join("").toUpperCase()} -->
+                HA
+              </div>
+              <div class= "user-name" style="display: flex; flex-direction:column; align-items: center;" >
+                <p class="mb-0" style="color: hsl(206deg 100% 40%); font-size: 1rem;">Hirad Abbasi (20)</p>
+                <small class="text-muted">3 days ago</small>
+              </div>
+            </div>
           </div>
-          <p class="mb-1">How can I prevent options view of the RawAutocomplete widget from overflowing on screen in Flutter?</p>
-          <button type="button" class="btn btn-outline-info btn-sm">flutter</button>
-          <button type="button" class="btn btn-outline-info btn-sm">dart</button>
-          <button type="button" class="btn btn-outline-info btn-sm">popup</button>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Some placeholder content in a paragraph.</p>
-          <button type="button" class="btn btn-outline-info btn-sm">wordpress</button>
-          <button type="button" class="btn btn-outline-info btn-sm">flutter</button>
-          <button type="button" class="btn btn-outline-info btn-sm">api</button>
-          <button type="button" class="btn btn-outline-info btn-sm">dart</button>
-          <button type="button" class="btn btn-outline-info btn-sm">wordpress-rest-api</button>
-        </a>
-
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">How can I prevent options view of the RawAutocomplete widget from overflowing on screen in Flutter?</p>
-          <button type="button" class="btn btn-outline-info btn-sm">flutter</button>
-          <button type="button" class="btn btn-outline-info btn-sm">dart</button>
-          <button type="button" class="btn btn-outline-info btn-sm">popup</button>
         </a>
         <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
+          <div class="interactions-container d-flex w-100 justify-content-between">
+            <div class="d-flex w-75" style="gap: 15px; flex-wrap: nowrap;">
+              <h2 class="mb-1">0 votes</h2>
+              <h2 class="mb-1" style="color: hsl(210,8%,45%);">0 answers</h2>
+              <h2 class="mb-1" style="color: hsl(210,8%,45%);">1 view</h2>
+            </div>
+            <small class="text-muted uploaded-date-responsive">3 days ago</small>
           </div>
-          <p class="mb-1">Some placeholder content in a paragraph.</p>
-          <button type="button" class="btn btn-outline-info btn-sm">wordpress</button>
-          <button type="button" class="btn btn-outline-info btn-sm">flutter</button>
-          <button type="button" class="btn btn-outline-info btn-sm">api</button>
-          <button type="button" class="btn btn-outline-info btn-sm">dart</button>
-          <button type="button" class="btn btn-outline-info btn-sm">wordpress-rest-api</button>
+          <p class="mb-0 question-decription" style="color: hsl(206deg 100% 40%); font-size: 1.2rem; width: 80%;">React Error: Child compilation failed: Must use import to load ES Module</p>
+          <div class="d-flex w-100 justify-content-between tag-and-user-container">
+            <div class="question-tags-container d-flex w-75" style="gap: 5px; flex-wrap: wrap;">
+              <button type="button" class="btn btn-outline-success btn-sm">wordpress</button>
+              <button type="button" class="btn btn-outline-success btn-sm">flutter</button>
+              <button type="button" class="btn btn-outline-success btn-sm">api</button>
+              <button type="button" class="btn btn-outline-success btn-sm">dart</button>
+              <button type="button" class="btn btn-outline-success btn-sm">wordpress-rest-api</button>
+            </div>
+            <div class="question-user-container d-flex w-20" style="gap: 5px; align-items: center;">
+              <div class="chat-message-profile-img">
+                <!-- {`${props.value[0].firstName} ${props.value[0].lastName}`.match(/(\b\S)?/g).join("").match(/(^\S|\S$)?/g).join("").toUpperCase()} -->
+                HA
+              </div>
+              <div class= "user-name" style="display: flex; flex-direction:column; align-items: center;" >
+                <p class="mb-0" style="color: hsl(206deg 100% 40%); font-size: 1rem;">Hirad Abbasi (20)</p>
+                <small class="text-muted">3 days ago</small>
+              </div>
+            </div>
+          </div>
         </a>
-
         <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
+          <div class="interactions-container d-flex w-100 justify-content-between">
+            <div class="d-flex w-75" style="gap: 15px; flex-wrap: nowrap;">
+              <h2 class="mb-1">0 votes</h2>
+              <h2 class="mb-1" style="color: hsl(210,8%,45%);">0 answers</h2>
+              <h2 class="mb-1" style="color: hsl(210,8%,45%);">1 view</h2>
+            </div>
+            <small class="text-muted uploaded-date-responsive">3 days ago</small>
           </div>
-          <p class="mb-1">How can I prevent options view of the RawAutocomplete widget from overflowing on screen in Flutter?</p>
-          <button type="button" class="btn btn-outline-info btn-sm">flutter</button>
-          <button type="button" class="btn btn-outline-info btn-sm">dart</button>
-          <button type="button" class="btn btn-outline-info btn-sm">popup</button>
+          <p class="mb-0 question-decription" style="color: hsl(206deg 100% 40%); font-size: 1.2rem; width: 80%;">React Error: Child compilation failed: Must use import to load ES Module</p>
+          <div class="d-flex w-100 justify-content-between tag-and-user-container">
+            <div class="question-tags-container d-flex w-75" style="gap: 5px; flex-wrap: wrap;">
+              <button type="button" class="btn btn-outline-success btn-sm">wordpress</button>
+              <button type="button" class="btn btn-outline-success btn-sm">flutter</button>
+              <button type="button" class="btn btn-outline-success btn-sm">api</button>
+              <button type="button" class="btn btn-outline-success btn-sm">dart</button>
+              <button type="button" class="btn btn-outline-success btn-sm">wordpress-rest-api</button>
+            </div>
+            <div class="question-user-container d-flex w-20" style="gap: 5px; align-items: center;">
+              <div class="chat-message-profile-img">
+                <!-- {`${props.value[0].firstName} ${props.value[0].lastName}`.match(/(\b\S)?/g).join("").match(/(^\S|\S$)?/g).join("").toUpperCase()} -->
+                HA
+              </div>
+              <div class= "user-name" style="display: flex; flex-direction:column; align-items: center;" >
+                <p class="mb-0" style="color: hsl(206deg 100% 40%); font-size: 1rem;">Hirad Abbasi (20)</p>
+                <small class="text-muted">3 days ago</small>
+              </div>
+            </div>
+          </div>
         </a>
- 
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="interactions-container d-flex w-100 justify-content-between">
+            <div class="d-flex w-75" style="gap: 15px; flex-wrap: nowrap;">
+              <h2 class="mb-1">0 votes</h2>
+              <h2 class="mb-1" style="color: hsl(210,8%,45%);">0 answers</h2>
+              <h2 class="mb-1" style="color: hsl(210,8%,45%);">1 view</h2>
+            </div>
+            <small class="text-muted uploaded-date-responsive">3 days ago</small>
+          </div>
+          <p class="mb-0 question-decription" style="color: hsl(206deg 100% 40%); font-size: 1.2rem; width: 80%;">React Error: Child compilation failed: Must use import to load ES Module</p>
+          <div class="d-flex w-100 justify-content-between tag-and-user-container">
+            <div class="question-tags-container d-flex w-75" style="gap: 5px; flex-wrap: wrap;">
+              <button type="button" class="btn btn-outline-success btn-sm">wordpress</button>
+              <button type="button" class="btn btn-outline-success btn-sm">flutter</button>
+              <button type="button" class="btn btn-outline-success btn-sm">api</button>
+              <button type="button" class="btn btn-outline-success btn-sm">dart</button>
+              <button type="button" class="btn btn-outline-success btn-sm">wordpress-rest-api</button>
+            </div>
+            <div class="question-user-container d-flex w-20" style="gap: 5px; align-items: center;">
+              <div class="chat-message-profile-img">
+                <!-- {`${props.value[0].firstName} ${props.value[0].lastName}`.match(/(\b\S)?/g).join("").match(/(^\S|\S$)?/g).join("").toUpperCase()} -->
+                HA
+              </div>
+              <div class= "user-name" style="display: flex; flex-direction:column; align-items: center;" >
+                <p class="mb-0" style="color: hsl(206deg 100% 40%); font-size: 1rem;">Hirad Abbasi (20)</p>
+                <small class="text-muted">3 days ago</small>
+              </div>
+            </div>
+          </div>
+        </a>    
       </div>
       <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center" style="gap: 0px;"> 
